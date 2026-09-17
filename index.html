@@ -19,19 +19,27 @@ class CricXCrateUI extends HTMLElement {
     this.SENSITIVITY = 2.5;
 
     this.STREAMS = {
-      "FanCode": {
-        "240p": "/?url=" + encodeURIComponent("https://in-mc-flive.fancode.com/mumbai/4248968_english_hls_8302d8a0e337876_1ta-di_h264/240p.m3u8?hdntl=Expires=1789732660~_GO=Generated~acl=/mumbai/4248968_english_hls_8302d8a0e337876_1ta-di_h264/*~Signature=AVl424OopuygFpyOLD5yHVUsL9vF_5SAW_83Ow8n0KJCGux2wNyjHu-6OnPGpMITuMc5XD4qgepGqybRN6hC5JjhRCkC"),
-        "360p": "/?url=" + encodeURIComponent("https://in-mc-flive.fancode.com/mumbai/4248968_english_hls_8302d8a0e337876_1ta-di_h264/360p.m3u8?hdntl=Expires=1789732660~_GO=Generated~acl=/mumbai/4248968_english_hls_8302d8a0e337876_1ta-di_h264/*~Signature=AVl424OopuygFpyOLD5yHVUsL9vF_5SAW_83Ow8n0KJCGux2wNyjHu-6OnPGpMITuMc5XD4qgepGqybRN6hC5JjhRCkC"),
-        "480p": "/?url=" + encodeURIComponent("https://in-mc-flive.fancode.com/mumbai/4248968_english_hls_8302d8a0e337876_1ta-di_h264/480p.m3u8?hdntl=Expires=1789732660~_GO=Generated~acl=/mumbai/4248968_english_hls_8302d8a0e337876_1ta-di_h264/*~Signature=AVl424OopuygFpyOLD5yHVUsL9vF_5SAW_83Ow8n0KJCGux2wNyjHu-6OnPGpMITuMc5XD4qgepGqybRN6hC5JjhRCkC"),
-        "540p": "/?url=" + encodeURIComponent("https://in-mc-flive.fancode.com/mumbai/4248968_english_hls_8302d8a0e337876_1ta-di_h264/540p.m3u8?hdntl=Expires=1789732660~_GO=Generated~acl=/mumbai/4248968_english_hls_8302d8a0e337876_1ta-di_h264/*~Signature=AVl424OopuygFpyOLD5yHVUsL9vF_5SAW_83Ow8n0KJCGux2wNyjHu-6OnPGpMITuMc5XD4qgepGqybRN6hC5JjhRCkC"),
-        "720p": "/?url=" + encodeURIComponent("https://in-mc-flive.fancode.com/mumbai/4248968_english_hls_8302d8a0e337876_1ta-di_h264/720p.m3u8?hdntl=Expires=1789732660~_GO=Generated~acl=/mumbai/4248968_english_hls_8302d8a0e337876_1ta-di_h264/*~Signature=AVl424OopuygFpyOLD5yHVUsL9vF_5SAW_83Ow8n0KJCGux2wNyjHu-6OnPGpMITuMc5XD4qgepGqybRN6hC5JjhRCkC"),
-        "1080p": "/?url=" + encodeURIComponent("https://in-mc-flive.fancode.com/mumbai/4248968_english_hls_8302d8a0e337876_1ta-di_h264/1080p.m3u8?hdntl=Expires=1789732660~_GO=Generated~acl=/mumbai/4248968_english_hls_8302d8a0e337876_1ta-di_h264/*~Signature=AVl424OopuygFpyOLD5yHVUsL9vF_5SAW_83Ow8n0KJCGux2wNyjHu-6OnPGpMITuMc5XD4qgepGqybRN6hC5JjhRCkC")
+      "English": {
+        "240p": "/?url=" + encodeURIComponent("https://in-mc-flive.fancode.com/out/v1/ap-south-1/4248492_english_265127/ad-h264/index__240p.m3u8?hdntl=Expires=1789738118~_GO=Generated~acl=/out/v1/ap-south-1/4248492_english_265127/ad-h264/*~Signature=AVl424Ox74kvQKS9xYRAMzL7kSaS83CMliammfFark0LyYdtwrdOe-cNx95Vec71T2S4fikouvNNsG_WcXzcWiFwGxwL"),
+        "360p": "/?url=" + encodeURIComponent("https://in-mc-flive.fancode.com/out/v1/ap-south-1/4248492_english_265127/ad-h264/index__360p.m3u8?hdntl=Expires=1789738118~_GO=Generated~acl=/out/v1/ap-south-1/4248492_english_265127/ad-h264/*~Signature=AVl424Ox74kvQKS9xYRAMzL7kSaS83CMliammfFark0LyYdtwrdOe-cNx95Vec71T2S4fikouvNNsG_WcXzcWiFwGxwL"),
+        "480p": "/?url=" + encodeURIComponent("https://in-mc-flive.fancode.com/out/v1/ap-south-1/4248492_english_265127/ad-h264/index__480p.m3u8?hdntl=Expires=1789738118~_GO=Generated~acl=/out/v1/ap-south-1/4248492_english_265127/ad-h264/*~Signature=AVl424Ox74kvQKS9xYRAMzL7kSaS83CMliammfFark0LyYdtwrdOe-cNx95Vec71T2S4fikouvNNsG_WcXzcWiFwGxwL"),
+        "540p": "/?url=" + encodeURIComponent("https://in-mc-flive.fancode.com/out/v1/ap-south-1/4248492_english_265127/ad-h264/index__540p.m3u8?hdntl=Expires=1789738118~_GO=Generated~acl=/out/v1/ap-south-1/4248492_english_265127/ad-h264/*~Signature=AVl424Ox74kvQKS9xYRAMzL7kSaS83CMliammfFark0LyYdtwrdOe-cNx95Vec71T2S4fikouvNNsG_WcXzcWiFwGxwL"),
+        "720p": "/?url=" + encodeURIComponent("https://in-mc-flive.fancode.com/out/v1/ap-south-1/4248492_english_265127/ad-h264/index__720p.m3u8?hdntl=Expires=1789738118~_GO=Generated~acl=/out/v1/ap-south-1/4248492_english_265127/ad-h264/*~Signature=AVl424Ox74kvQKS9xYRAMzL7kSaS83CMliammfFark0LyYdtwrdOe-cNx95Vec71T2S4fikouvNNsG_WcXzcWiFwGxwL"),
+        "1080p": "/?url=" + encodeURIComponent("https://in-mc-flive.fancode.com/out/v1/ap-south-1/4248492_english_265127/ad-h264/index__1080p.m3u8?hdntl=Expires=1789738118~_GO=Generated~acl=/out/v1/ap-south-1/4248492_english_265127/ad-h264/*~Signature=AVl424Ox74kvQKS9xYRAMzL7kSaS83CMliammfFark0LyYdtwrdOe-cNx95Vec71T2S4fikouvNNsG_WcXzcWiFwGxwL")
+      },
+      "Hindi": {
+        "240p": "/?url=" + encodeURIComponent("https://in-mc-flive.fancode.com/out/v1/ap-south-1/4248492_hindi_109112/ad-h264/index__240p.m3u8?hdntl=Expires=1789738118~_GO=Generated~acl=/out/v1/ap-south-1/4248492_hindi_109112/ad-h264/*~Signature=AVl424PTnCHKQVLqIu_BmdWfNJxgF3e3b03BLT9NCj6os4GDZbgTOtqFf7trjd2ll0XSzACkVk-ok64REfo9GQsCG8gL"),
+        "360p": "/?url=" + encodeURIComponent("https://in-mc-flive.fancode.com/out/v1/ap-south-1/4248492_hindi_109112/ad-h264/index__360p.m3u8?hdntl=Expires=1789738118~_GO=Generated~acl=/out/v1/ap-south-1/4248492_hindi_109112/ad-h264/*~Signature=AVl424PTnCHKQVLqIu_BmdWfNJxgF3e3b03BLT9NCj6os4GDZbgTOtqFf7trjd2ll0XSzACkVk-ok64REfo9GQsCG8gL"),
+        "480p": "/?url=" + encodeURIComponent("https://in-mc-flive.fancode.com/out/v1/ap-south-1/4248492_hindi_109112/ad-h264/index__480p.m3u8?hdntl=Expires=1789738118~_GO=Generated~acl=/out/v1/ap-south-1/4248492_hindi_109112/ad-h264/*~Signature=AVl424PTnCHKQVLqIu_BmdWfNJxgF3e3b03BLT9NCj6os4GDZbgTOtqFf7trjd2ll0XSzACkVk-ok64REfo9GQsCG8gL"),
+        "540p": "/?url=" + encodeURIComponent("https://in-mc-flive.fancode.com/out/v1/ap-south-1/4248492_hindi_109112/ad-h264/index__540p.m3u8?hdntl=Expires=1789738118~_GO=Generated~acl=/out/v1/ap-south-1/4248492_hindi_109112/ad-h264/*~Signature=AVl424PTnCHKQVLqIu_BmdWfNJxgF3e3b03BLT9NCj6os4GDZbgTOtqFf7trjd2ll0XSzACkVk-ok64REfo9GQsCG8gL"),
+        "720p": "/?url=" + encodeURIComponent("https://in-mc-flive.fancode.com/out/v1/ap-south-1/4248492_hindi_109112/ad-h264/index__720p.m3u8?hdntl=Expires=1789738118~_GO=Generated~acl=/out/v1/ap-south-1/4248492_hindi_109112/ad-h264/*~Signature=AVl424PTnCHKQVLqIu_BmdWfNJxgF3e3b03BLT9NCj6os4GDZbgTOtqFf7trjd2ll0XSzACkVk-ok64REfo9GQsCG8gL"),
+        "1080p": "/?url=" + encodeURIComponent("https://in-mc-flive.fancode.com/out/v1/ap-south-1/4248492_hindi_109112/ad-h264/index__1080p.m3u8?hdntl=Expires=1789738118~_GO=Generated~acl=/out/v1/ap-south-1/4248492_hindi_109112/ad-h264/*~Signature=AVl424PTnCHKQVLqIu_BmdWfNJxgF3e3b03BLT9NCj6os4GDZbgTOtqFf7trjd2ll0XSzACkVk-ok64REfo9GQsCG8gL")
       }
     };
 
     this.CONFIG = {
-      telegramLink: "https://t.me/+xSqMXDXp78ZiOWQ1",
-      currentServer: "FanCode",
+      telegramLink: "https://t.me/+rQTz5VL8CRpjNTZl",
+      currentLanguage: "English",
       currentQuality: "720p"
     };
 
@@ -63,13 +71,13 @@ class CricXCrateUI extends HTMLElement {
 
       <style>
         :host {
-          --primary-rgb: 255, 117, 151; /* Owl Pink #FF7597 (Level 200) */
-          --secondary-rgb: 255, 0, 102; /* Owl Pink #FF0266 (Level 500) */
+          --primary-rgb: 255, 117, 151;
+          --secondary-rgb: 255, 0, 102;
           --accent: #ff7597;
           --accent-glow: rgba(255, 117, 151, 0.28);
           --accent-glow-intense: rgba(255, 117, 151, 0.7);
-          --bg-pure: #0c090e; /* Deep luxurious dark pink-tinted background */
-          --bg-card: rgba(18, 12, 22, 0.90); /* Frosted dark card */
+          --bg-pure: #0c090e;
+          --bg-card: rgba(18, 12, 22, 0.90);
           --border-glass: rgba(255, 117, 151, 0.15);
           --border-glass-bright: rgba(255, 117, 151, 0.35);
           --heading-dynamic: #ffffff;
@@ -119,7 +127,7 @@ class CricXCrateUI extends HTMLElement {
         .hero { position: relative; padding: clamp(20px, 3.5vw, 56px) 0 clamp(14px, 2.2vw, 36px); }
         .hero-tag { display: inline-flex; align-items: center; gap: 10px; font-family: 'Space Grotesk', sans-serif; color: var(--accent); font-size: clamp(12px, 1.1vw, 15px); font-weight: 800; letter-spacing: 3px; text-transform: uppercase; }
         .hero-tag::before { content: ""; width: clamp(20px, 2.2vw, 34px); height: 2px; background: var(--accent); border-radius: 2px; }
-        .hero-headline { margin-top: clamp(8px, 1.2vw, 18px); font-family: 'Syne', sans-serif; font-size: clamp(32px, 6.5vw, 90px); line-height: 0.88; letter-spacing: -0.06em; font-weight: 900; text-transform: uppercase; }
+        .hero-headline { margin-top: clamp(8px, 1.2vw, 18px); font-family: 'Syne', sans-serif; font-size: clamp(28px, 5.5vw, 75px); line-height: 0.92; letter-spacing: -0.06em; font-weight: 900; text-transform: uppercase; }
         .hero-headline .accent-txt { color: var(--accent); background: linear-gradient(135deg, #ff7597 0%, #ff0266 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         
         .controls-deck { display: flex; flex-direction: column; gap: 12px; margin-top: 18px; margin-bottom: 22px; }
@@ -216,10 +224,18 @@ class CricXCrateUI extends HTMLElement {
         </header>
 
         <section class="hero">
-          <div class="hero-tag">FANCODE LIVE STREAM</div>
-          <h1 class="hero-headline">MATCH <span class="accent-txt">STREAM</span></h1>
+          <div class="hero-tag">AFGHANISTAN VS INDIA</div>
+          <h1 class="hero-headline">INDIA TOUR OF <span class="accent-txt">AFGHANISTAN</span></h1>
           
           <div class="controls-deck">
+            <div class="control-group">
+              <span class="control-label">Audio Language</span>
+              <div class="options-row" id="languageGroup">
+                <button class="cyber-pill active" data-language="English">English</button>
+                <button class="cyber-pill" data-language="Hindi">Hindi</button>
+              </div>
+            </div>
+
             <div class="control-group">
               <span class="control-label">Resolution Quality</span>
               <div class="options-row" id="qualityGroup">
@@ -234,7 +250,7 @@ class CricXCrateUI extends HTMLElement {
           </div>
 
           <div class="hero-details">
-            <b>ENGLISH STREAM</b><span class="meta-separator"></span>HLS PROXY<span class="meta-separator"></span>LIVE NOW
+            <b>LIVE CRICKET</b><span class="meta-separator"></span>HLS PROXY<span class="meta-separator"></span>MATCH LIVE
           </div>
         </section>
         <main class="broadcast">
@@ -246,7 +262,7 @@ class CricXCrateUI extends HTMLElement {
 
           <div class="player-meta-bar">
             <div class="stream-title-group">
-              <strong id="streamInfoTitle">FanCode Live Match Broadcast · (720p)</strong>
+              <strong id="streamInfoTitle">Afghanistan vs India · English (720p)</strong>
               <span>FanCode Match Center</span>
             </div>
             <button class="share-action-btn" id="btnShare">
@@ -301,6 +317,7 @@ class CricXCrateUI extends HTMLElement {
   initEventListeners() {
     const btnShare = this._shadow.getElementById("btnShare");
     const shareBtnText = this._shadow.getElementById("shareBtnText");
+    const languageGroup = this._shadow.getElementById("languageGroup");
     const qualityGroup = this._shadow.getElementById("qualityGroup");
 
     const initialModal = this._shadow.getElementById('tgInitialModal');
@@ -322,6 +339,15 @@ class CricXCrateUI extends HTMLElement {
     tgJoinBtn2.addEventListener("click", closeSecondModal);
     modalCloseCross.addEventListener("click", closeSecondModal);
 
+    languageGroup.addEventListener("click", (e) => {
+      const btn = e.target.closest("button");
+      if (!btn) return;
+      languageGroup.querySelectorAll("button").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      this.CONFIG.currentLanguage = btn.getAttribute("data-language");
+      this.setupIframePlayer();
+    });
+
     qualityGroup.addEventListener("click", (e) => {
       const btn = e.target.closest("button");
       if (!btn) return;
@@ -332,7 +358,7 @@ class CricXCrateUI extends HTMLElement {
     });
 
     btnShare.addEventListener("click", async () => {
-      const shareData = { title: "FanCode Live — Match Stream", text: "Watch live match stream!", url: window.location.href };
+      const shareData = { title: "Afghanistan vs India — Live Stream", text: "Watch live match stream!", url: window.location.href };
       try {
         if (navigator.share && /mobile|android|iphone|ipad|tablet/i.test(navigator.userAgent)) {
           await navigator.share(shareData);
@@ -348,12 +374,13 @@ class CricXCrateUI extends HTMLElement {
 
   setupIframePlayer() {
     const iframe = this._shadow.getElementById('player');
+    const language = this.CONFIG.currentLanguage;
     const quality = this.CONFIG.currentQuality;
-    const streamUrl = this.STREAMS["FanCode"][quality];
+    const streamUrl = this.STREAMS[language][quality];
 
     const infoTitle = this._shadow.getElementById('streamInfoTitle');
     if (infoTitle) {
-      infoTitle.textContent = `FanCode Live Match Broadcast · (${quality})`;
+      infoTitle.textContent = `Afghanistan vs India · ${language} (${quality})`;
     }
 
     iframe.srcdoc = `
@@ -454,4 +481,3 @@ customElements.define('cricxcrate-ui', CricXCrateUI);
     </script>
 </body>
 </html>
-
