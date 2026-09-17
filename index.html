@@ -395,7 +395,7 @@ class CricXCrateUI extends HTMLElement {
         </style>
       </head>
       <body>
-        <video id="player" controls crossorigin></video>
+        <video id="player" controls crossorigin playsinline></video>
         <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"><\/script>
         <script src="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.polyfilled.js"><\/script>
         <script>
@@ -403,15 +403,36 @@ class CricXCrateUI extends HTMLElement {
           const source = '${streamUrl}';
 
           if (Hls.isSupported()) {
-              const hls = new Hls();
+              const hls = new Hls({
+                  xhrSetup: function(xhr, url) {
+                      xhr.withCredentials = false;
+                  }
+              });
               hls.loadSource(source);
               hls.attachMedia(video);
               hls.on(Hls.Events.MANIFEST_PARSED, () => {
-                  new Plyr(video);
+                  const player = new Plyr(video);
+                  video.play().catch(() => {});
+              });
+              hls.on(Hls.Events.ERROR, function (event, data) {
+                  if (data.fatal) {
+                      switch (data.type) {
+                          case Hls.ErrorTypes.NETWORK_ERROR:
+                              hls.startLoad();
+                              break;
+                          case Hls.ErrorTypes.MEDIA_ERROR:
+                              hls.recoverMediaError();
+                              break;
+                          default:
+                              hls.destroy();
+                              break;
+                      }
+                  }
               });
           } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
               video.src = source;
-              new Plyr(video);
+              const player = new Plyr(video);
+              video.play().catch(() => {});
           }
         <\/script>
       </body>
